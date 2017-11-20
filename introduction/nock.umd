@@ -1,0 +1,14 @@
+;>
+
+# Introduction
+## Nock
+
+The Nock VM is a Turing-complete function that maps a cell `{subject formula}`
+to a noun product, where subject is the data, formula is the code, and product 
+is the result.
+
+To program in Hoon, this is all you need to know about Nock. It's probably at 
+least worth skimming the definition, though.
+
+(Also, the Hoon programmer should know that (a) tail call elimination in Nock 
+is straightforward; and (b) tail calls in Hoon always become tail calls in Nock.)
