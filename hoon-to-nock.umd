@@ -1,0 +1,17 @@
+:-  :~  title+'Hoon to Nock'
+        author+'Matthew Levan ~mastyr-bottec matt.s.levan@gmail.com'
+        navhome+'/loon/'
+        sort+3
+    ==
+;>
+
+# Hoon to Nock
+
+## Nock
+
+Recall that Nock is a function which accepts a noun and produces a noun. The 
+function itself is usually expressed in pseudocode as `*` ("tar"). 
+
+Nock accepts a noun, but usually it is a cell with the form `[subject formula]`. 
+
+## `.*` ("dottar") Overview

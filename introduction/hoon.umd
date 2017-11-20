@@ -1,6 +1,13 @@
+:-  :~  title+'Hoon'
+        author+'Matthew Levan ~mastyr-bottec matt.s.levan@gmail.com'
+        navhome+'/loon/'
+        sort+1
+        next+&
+    ==
 ;>
 
 # Introduction
+
 ## Hoon
 
 Hoon is a strict, typed functional language which compiles itself to Nock, 

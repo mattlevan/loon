@@ -1,47 +1,20 @@
-:::~  title+'Loon'
-::    author+'Matthew Levan ~mastyr-bottec matt.s.levan@gmail.com'
-::    date+~2017.11.17
-::    anchor+none
-::==  
-::
+:-  :~  title+'Loon - Learn Hoon'
+        author+'Matthew Levan ~mastyr-bottec matt.s.levan@gmail.com'
+        anchor+%none
+        navhome+'/loon/'
+    ==
 ;>
-# Loon
+
+# Loon - Learn Hoon
+
+Welcome to Loon, an interactive course purposed to turn loons into hoons. 
+Below, you can catch a glimpse of the road ahead or jump to a particular 
+chapter. This course assumes little to no previous programming experience, 
+so relax and enjoy learning Hoon, the statically typed, functional programming 
+language of Urbit.
 
 ## Chapters
 
-+ [Introduction](introduction/introduction)
-  - [Hoon](introduction/hoon)  
-  - [Nock](introduction/nock)
-  - [The Dojo](introduction/dojo)
-+ [The Noun](noun/noun)
-  - [The Atom](noun/atom)
-  - [The Cell](noun/cell)
-+ [Cell Adressing](cell-addressing/cell-addressing)
-  - [`axis:tree` Syntax](cell-addressing/axis)
-  - [Numeric Indexing](cell-addressing/numeric-indexing)
-  - [Lark Syntax](cell-addressing/lark-syntax)
-  - [Tuple Indexing](cell-addressing/tuple-indexing)
-+ [Hoon to Nock](hoon-to-nock/hoon-to-nock)
-  - [Nock](hoon-to-nock/nock)
-  - [Nock 0](hoon-to-nock/nock-0)
-  - [Nock 1](hoon-to-nock/nock-1) 
-  - [Nock 2](hoon-to-nock/nock-2)  
-  - [Nock 7](hoon-to-nock/nock-7)  
-  - [Nock 4](hoon-to-nock/nock-4)  
-  - [Nock 3](hoon-to-nock/nock-3)  
-  - [Autocons](hoon-to-nock/autocons)  
-  - [Nock 5](hoon-to-nock/nock-5)  
-  - [Nock 6](hoon-to-nock/nock-6)  
-  - [Nock 8](hoon-to-nock/nock-8)  
-  - [Nock 9](hoon-to-nock/nock-9)  
-  - [Conclusion of Hoon to Nock](hoon-to-nock/conclusion)
-+ [`:` "col" Runes: Making Cells](cell-runes/cell-runes)
-
 ;=
-  ;div
-    ;link/"../repl/main.css"(rel "stylesheet");
-    ;script@"../repl/main.js";
-    ;repl;
-    ;pre.result;
-  ==
+  ;list;
 ==
