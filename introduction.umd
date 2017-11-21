@@ -43,8 +43,8 @@ following (some will just have example(s), though):
 + Exercise for readers to solve in a web REPL
 + Solution for readers to optionally view (hidden by default)
 
-## The REPL
-
+## The REPL (Read-Eval-Print-Loop)
+ 
 Each page which has exercises or examples for the reader to run will also 
 include a code editor which can be used to input Nock or Hoon for evaluation. 
 Simply write the code in the box (use Shift+Enter to enter new lines) and 

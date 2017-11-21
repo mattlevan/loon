@@ -1,10 +1,11 @@
-:-  :~  title+'Nock 8: Extend'
+:-  :~  title+'Nock 10: Hint'
         author+'Matthew Levan ~mastyr-bottec matt.s.levan@gmail.com'
         navhome+'/loon/'
-        sort+21
+        sort+23
         next+&
     ==
 ;>
 
 # Hoon to Nock
 
+## Nock 10: Hint

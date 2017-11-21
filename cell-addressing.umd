@@ -9,6 +9,9 @@
 
 ## Overview
 
+Cells are a fundamental part of Hoon and Nock. To work with them, we need to 
+first learn to address them properly.
+
 ;=
   ;div.link-next
     ;a/"/loon/cell-addressing/axis-syntax": Next: Axis Syntax

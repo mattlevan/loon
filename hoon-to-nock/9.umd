@@ -1,5 +1,10 @@
----
-navhome: /learn-hoon/hoon-to-nock/
-sort: 14
-title: Nock 9 and `|%` "barcen"
----
+:-  :~  title+'Nock 9: Invoke'
+        author+'Matthew Levan ~mastyr-bottec matt.s.levan@gmail.com'
+        navhome+'/loon/'
+        sort+22
+        next+&
+    ==
+;>
+
+# Hoon to Nock
+

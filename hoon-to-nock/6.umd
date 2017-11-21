@@ -1,5 +1,10 @@
----
-navhome: /learn-hoon/hoon-to-nock/
-sort: 12
-title: Nock 6 and `?:` "wutcol"
----
+:-  :~  title+'Nock 6: Branch'
+        author+'Matthew Levan ~mastyr-bottec matt.s.levan@gmail.com'
+        navhome+'/loon/'
+        sort+20
+        next+&
+    ==
+;>
+
+# Hoon to Nock
+

@@ -1,5 +1,70 @@
----
-navhome: /learn-hoon/hoon-to-nock/
-sort: 11
-title: Nock 5, `.=` "dottis", and `=` "tis"
----
+:-  :~  title+'Nock 5, .=, and ='
+        author+'Matthew Levan ~mastyr-bottec matt.s.levan@gmail.com'
+        navhome+'/loon/'
+        sort+19
+        next+&
+    ==
+;>
+
+# Hoon to Nock
+
+## Nock 5, `.=`, and `=`
+
+Nock 5 is the equality testing instruction. 
+
+### Definition
+
+```
+*[a 5 b]  =*[a b]
+
+=[a a]    0
+=[a b]    1
+```
+
+Remember, `0` is `%.y` is true and `1` is `%.n` is false.
+
+### `.=` ("dottis")
+
+This rune calls Nock 5. Let's see how it works with this example:
+```
+.=  [42 43 44]  45
+```
+
+Now try wrapping that in a `!=` to see the compiled Nock.
+
+```
+!=  .=  [42 43 44]  45
+```
+
+Lastly, try this one:
+
+```
+.=  [+(0) +(1) +(2)]  [1 2 3]
+```
+
+### Exercise
+
+Try running a `.=` with the first argument as an atom and the second as a cell.
+What happens? 
+
+;=
+  ;div
+    ;link/"/repl/main.css"(rel "stylesheet");
+    ;script@"/repl/main.js";
+    ;repl;
+    ;pre.result;
+  ==
+==
+
+### Explanation
+
+A `nest-fail`, which is what you should've seen upon running something similar 
+to
+```
+.=  42  [43 44]
+```
+
+is an error message the Hoon compiler produces when there is a type mismatch. 
+In the case of the snippet above, the two types (atom and cell) are 
+incompatible for comparison and thus produce a `nest-fail`.
+

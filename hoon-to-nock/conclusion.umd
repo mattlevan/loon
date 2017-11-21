@@ -1,5 +1,11 @@
----
-navhome: /learn-hoon/hoon-to-nock/
-sort: 15
-title: Conclusion
----
+:-  :~  title+'Conclusion'
+        author+'Matthew Levan ~mastyr-bottec matt.s.levan@gmail.com'
+        navhome+'/loon/'
+        sort+24
+    ==
+;>
+
+# Hoon to Nock
+
+## Conclusion
+
