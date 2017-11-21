@@ -37,17 +37,33 @@ $.extend(CodeMirror.defaults,
 )
 CodeMirror.commands.send = function(cm){
   var val = cm.getValue()
-  if(val === "") return;
+  if(val === "") {
+    $('pre.result').hide()
+    return;
+  }
   send(val,function(res){
+    if ($('pre.solution').length > 0) {
+      var sol = $('pre.solution')[0].innerText
+    }
     var pre = $('pre.result')
     pre.show()
     switch(Object.keys(res).join(" ")){
       case "good":
-        pre.removeClass('error')
+        pre.removeClass('alert alert-success')
+        pre.removeClass('alert alert-danger')
+        pre.removeClass('alert alert-info')
+        if (sol === res.good) {
+          pre.addClass('alert alert-success')
+        }
+        else {
+          pre.addClass('alert alert-info')
+        }
         pre[0].innerText = res.good
         break; 
       case "bad":
-        pre.addClass('error')
+        pre.removeClass('alert alert-success')
+        pre.removeClass('alert alert-info')
+        pre.addClass('alert alert-danger')
         pre[0].innerText = res.bad
         var latest = $('.CodeMirror').last()[0].CodeMirror
         if(latest && latest.hasFocus() && latest.getValue() === ""){
