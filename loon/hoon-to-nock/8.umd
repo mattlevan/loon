@@ -1,0 +1,97 @@
+:-  :~  title+'Nock 8 and =+'
+        author+'Matthew Levan ~mastyr-bottec matt.s.levan@gmail.com'
+        navhome+'/loon/'
+        sort+21
+        next+&
+    ==
+;>
+
+# Hoon to Nock
+
+## Nock 8 and `=+` ("tislus")
+
+Nock 8 is extend. `=+` ("tislus") calls Nock 8. 
+
+### Definition
+
+```
+*[a 8 b c]  *[a 7 [[7 [0 1] b] 0 1] c]
+```
+
+Recall:
+```
+*[a 7 b c]  *[a 2 b 1 c]
+```
+
+Nock 8 is like Nock 7 except that the subject for `c` is not simply the 
+product of `b`, but the ordered pair of the product of `b` and the original 
+subject. In this way, Nock 8 acts as a sort of "variable declaration" 
+instruction although technically it produces a mutant copy of the subject 
+with an added value (the product of `b`).
+
+In a gist, Nock 8 adds a noun to the head of the subject!
+
+### Examples
+
+Let's add 43 to our subject.
+```
+.*  42  [8 [4 0 1] [0 1]]
+```
+                           
+We can achieve the same with the use of `=+`.
+```
+=>  42  =+  43  .
+```
+
+And a few more:
+```
+=+  [42 43 44]  .*  -  [0 1]
+```
+```
+=+  ?:  %.y  42  +(42)  .*  -  [4 0 1]
+```
+
+### Introduction to Faces
+
+Faces are labels for naming nouns. Think of them like names which wrap nouns. 
+We can run the same examples as before, except now with faces for our nouns.
+
+```
+=+  a=[42 43 44]  .*  a  [0 1]
+```
+
+Easy, right? How about that last one:
+```
+=+  ?:  %.y  a=42  a=+(42)  .*  a  [4 0 1]
+```
+
+The `=+` rune allows us to wrap a noun in a face-- a rough equivalent to 
+"declaring a variable."
+
+### Additional Syntax
+
+After we've used a face to wrap a noun, we can access that face via two means 
+(but we'll only look at the first method for now):
++ `foo.bar` produces `foo` of `bar`, where `bar` is some face in the subject
+
+Check out these examples:
+```
+=+  a=42  a.-
+```
+
+Note that the following does not work with the `.` accessor syntax:
+```
+-.[42 43]
+```
+
+### Nesting Examples
+
+Run each of these individually (one per line).
+```
+=+  a=42  =+  b=43  [a b]
+=+  a=42  ?:  .=  a  42  %.y  %.n
+=+  [a b]=[42 43]  a
+=+  [a=[b=42]]  b.a
+!=  [1 b=2]
+=+  [1 b=2]  b
+```

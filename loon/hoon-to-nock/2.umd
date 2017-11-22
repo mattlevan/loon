@@ -1,0 +1,53 @@
+:-  :~  title+'Nock 2: Evaluate'
+        author+'Matthew Levan ~mastyr-bottec matt.s.levan@gmail.com'
+        navhome+'/loon/'
+        sort+13
+        next+&
+    ==
+;>
+
+# Hoon to Nock
+
+## Nock 2: Evaluate
+
+Nock 2 is the Nock instruction itself. It means evaluate. Nock 2 is the 
+instruction called by our familiar `.*` rune. 
+
+### Definition
+
+```
+*[a 2 b c]  *[*[a b] *[a c]]
+```
+
+### Example
+
+We can produce the results from our previous example, except this time use only 
+Nock to do it. See if you can evaluate this expression by hand (on a piece of 
+paper, perhaps) and observe how Nock 2 works.
+
+```
+.*  [42 43 44]  [2 [1 45] [1 1 88 99]]
+```
+
+;=
+  ;div
+    ;link/"/repl/main.css"(rel "stylesheet");
+    ;script@"/repl/main.js";
+    ;repl;
+    ;pre.result;
+    ;pre.solution(hidden "yes"): [88 99]
+  ==
+==
+
+### Solution
+
+Here's the evaluation of the above by hand, step-by-step. Remember that it's 
+just pseudocode.
+
+```
+*[[42 43 44] [2 [1 45] [1 1 88 99]]]
+*[*[[42 43 44] [1 45]] *[[42 43 44] [1 1 88 99]]]
+*[45 [1 88 99]]
+[88 99]
+```
+

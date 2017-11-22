@@ -1,0 +1,67 @@
+:-  :~  title+'Nock 6 and ?:'
+        author+'Matthew Levan ~mastyr-bottec matt.s.levan@gmail.com'
+        navhome+'/loon/'
+        sort+20
+        next+&
+    ==
+;>
+
+# Hoon to Nock
+
+## Nock 6 and `?:`
+
+Nock 6 is the branch instruction used for conditional expressions like 
+if-then-else.
+
+### Definition
+
+```
+*[a 6 b c d]  *[a 2 [0 1] 2 [1 c d] [1 0] 2 [1 2 3] [1 0] 4 4 b]
+```
+
+Simply put, if `b` evaluates to true (`0`), we produce `c`; if `b` evaluates 
+to false (`1`), we produce `d`. Otherwise, we crash.
+
+### Pure Nock Examples
+
+This first example will set `b` to `0` (true) using the constant formula, Nock 
+1. Before running it, try and determine the product in your head.
+```
+.*  42  [6 [1 0] [4 0 1] [1 44]]
+```
+
+Next, we will switch `b` to `1` by flipping the `0` to `1`, explicitly. What 
+will be produced?
+```
+.*  42  [6 [1 1] [4 0 1] [1 44]]
+```
+
+### `?` ("wut") Runes and `?:` ("wutcol")
+
+`?` runes are conditional runes. `?:` ("wutcol") compiles to a Nock 6 formula.
+Be sure to try these examples with `!=` as well, to see exactly what Nock code 
+the compiler produces with each runic expression.
+
+### Examples with `?:`
+
+The following examples use loobean literals as conditionals; in this sense, no 
+conditional evaluation is performed since the condition is given literally as 
+either `%.y` or `%.n`.
+```
+?:  %.y  42  43
+```
+
+This example nests expressions! Recall that `.?` produces `%.y` if its argument 
+is a cell and `%.n` if it is an atom.
+```
+?:  %.n  42  ?:  %.y  !=  .?  43  [44 45]
+```
+
+The next set of examples uses the subject via the use of the familiar `=>` 
+("tisgar") rune.
+```
+=>  [42 43 44]  ?:  .?  -  +1  +2
+```
+```
+?:  .?  42  =>  [43 44]  -  =>  [45 46]  +1:.
+```
