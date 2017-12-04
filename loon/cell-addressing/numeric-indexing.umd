@@ -16,6 +16,17 @@ nodes are given address `1`. Recall that left children are addressed `2n` and
 right children are `2n+1`. Try the examples with the code box and play with 
 cells. When you're ready, see if you can solve the exercise. 
 
+Here's a visualization of the cell `[42 43 44 45]`, in tree form: 
+```
+  [42 43 44 45]
+     /  \
+    42 [43 44 45]
+          / \ 
+         43 [44 45]
+              / \ 
+             44 45
+```
+
 ### Examples
 
 + `+1:[42 43 44]`  
