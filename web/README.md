@@ -1,2 +1,0 @@
-# loon
-Learn Hoon
