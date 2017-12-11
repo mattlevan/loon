@@ -17,7 +17,7 @@ mounted `%home` desk. You can run the following shell commands (*replacing your
 urbit's home desk path as necessary*):
 ```
 $ git clone https://github.com/mattlevan/loon
-$ cp -r ./loon/* /urbit/path/your-urbit/home/web
+$ cp -r ./loon/* /urbit/path/your-urbit/home/
 ```
 Your `%clay` filesystem should acknowledge the newly added files.
 You'll probably want to remove the `README.md` file from your desk, too.
