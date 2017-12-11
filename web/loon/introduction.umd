@@ -1,0 +1,59 @@
+:-  :~  title+'Introduction'
+        author+'Matthew Levan ~mastyr-bottec matt.s.levan@gmail.com'
+        navhome+'/loon/'
+        sort+0
+    ==
+;>
+
+# Introduction
+
+## Overview
+
+As anyone who's worked with the language can tell you, the overall levels of  
+sanity and practicality in hoon are actually quite high. So why is it so hard 
+to learn?
+
+I believe most of the difficulty comes from the way hoon is taught.
+
+Specifically, the neophyte is bombarded with a bewildering barrage of new 
+concepts and terminology, and most of them are not explained in anywhere enough 
+detail without referencing the other concepts. As you're learning hoon, there 
+are far too many places where you're expected to gloss over something you're 
+looking at without it being explained. It doesn't need to be this hard; the 
+combined semantics of nock and hoon are actually more coherent than most 
+languages, and the docs should make it feel that way.
+
+I propose a new tutorial for hoon that presents concepts slowly, methodically, 
+and thoroughly, adhering to a strict discipline of unidirectional dependency: 
+thou shalt not present a new concept to the student without explaining it
+in full detail, with examples. Making reference to another concept in the 
+description is only allowed if that other concept has already been fully 
+explained. This tutorial also must not require a priori knowledge of computer 
+programming. This imposes some useful constraints on the order in which hoon 
+concepts should be taught, and on the methods used to elucidate them.
+
+## Specification
+
+The tutorial will be broken up into chapters, intended to be followed in order. 
+Later chapters may make reference to earlier chapters, but not vice versa, 
+except as footnotes or parentheticals. Most bullet points will contain the 
+following (some will just have example(s), though):
+
++ Example for readers to run in a web REPL
++ Exercise for readers to solve in a web REPL
++ Solution for readers to optionally view (hidden by default)
+
+## The REPL (Read-Eval-Print-Loop)
+ 
+Each page which has exercises or examples for the reader to run will also 
+include a code editor which can be used to input Nock or Hoon for evaluation. 
+Simply write the code in the box (use Shift+Enter to enter new lines) and 
+press Enter to evaluate the code. Correct code will return a **green** result, 
+valid code but incorrect code will return a **blue** result, and erroneous 
+input will return **red**.
+
+;=
+  ;div.link-next
+    ;a/"/loon/introduction/hoon": Next: Hoon
+  ==
+==

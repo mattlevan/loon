@@ -1,0 +1,40 @@
+:-  :~  title+'Autocons'
+        author+'Matthew Levan ~mastyr-bottec matt.s.levan@gmail.com'
+        navhome+'/loon/'
+        sort+18
+        next+&
+    ==
+;>
+
+# Hoon to Nock
+
+## Autocons
+
+Nock and Hoon _auto_matically _cons_truct cells. 
+
+### Examples
+
+Our first example is a tree addressing operation, so we may expect a Nock 0 or 
+two to be produced:
+```
+!=  [+7 +9]
+```
+
+Next, let's try an example that may produce a Nock 1.
+```
+!=  [+3 42]
+```
+
+How about some recursion?
+```
+!=  [+(+3) 42 +(42)]
+```
+
+;=
+  ;div
+    ;link/"/repl/main.css"(rel "stylesheet");
+    ;script@"/repl/main.js";
+    ;repl;
+    ;pre.result;
+  ==
+==

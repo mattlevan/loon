@@ -1,0 +1,51 @@
+:-  :~  title+'Numeric Indexing'
+        author+'Matthew Levan ~mastyr-bottec matt.s.levan@gmail.com'
+        navhome+'/loon/'
+        sort+2
+        next+&
+    ==
+;>
+
+# Cell Addressing
+
+## Numeric Indexing
+
+We can use numeric indexing for accessing elements within a cell, according to 
+the knowledge we learned about addresses in the previous section. Cells' root 
+nodes are given address `1`. Recall that left children are addressed `2n` and 
+right children are `2n+1`. Try the examples with the code box and play with 
+cells. When you're ready, see if you can solve the exercise. 
+
+Here's a visualization of the cell `[42 43 44 45]`, in tree form: 
+```
+  [42 43 44 45]
+     /  \
+    42 [43 44 45]
+          / \ 
+         43 [44 45]
+              / \ 
+             44 45
+```
+
+### Examples
+
++ `+1:[42 43 44]`  
++ `+2:[42 43 44]`  
++ `+3:[42 43 44]`  
+
+### Exercise
+
+Replace `n` in this code snippet with the correct address to access `45`: 
+```
++n:[42 43 44 45]
+```
+
+;=
+  ;div
+    ;link/"/repl/main.css"(rel "stylesheet");
+    ;script@"/repl/main.js";
+    ;repl;
+    ;pre.result;
+    ;pre.solution(hidden "yes"): 45
+  ==
+==

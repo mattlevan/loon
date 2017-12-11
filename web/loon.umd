@@ -1,0 +1,20 @@
+:-  :~  title+'Loon - Learn Hoon'
+        author+'Matthew Levan ~mastyr-bottec matt.s.levan@gmail.com'
+        anchor+%none
+        navhome+'/loon/'
+    ==
+;>
+
+# Loon - Learn Hoon
+
+Welcome to Loon, an interactive course purposed to turn loons into hoons. 
+Below, you can catch a glimpse of the road ahead or jump to a particular 
+chapter. This course assumes little to no previous programming experience, 
+so relax and enjoy learning Hoon, the statically typed, functional programming 
+language of Urbit.
+
+## Chapters
+
+;=
+  ;list;
+==

@@ -1,0 +1,15 @@
+.CodeMirror {
+  height: auto;
+  border: 1px solid #eee;
+}
+.CodeMirror-scroll {
+  height: auto;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.repl {
+  width: auto
+}
+.error {
+  background: #ebb
+}

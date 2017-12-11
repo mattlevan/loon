@@ -1,0 +1,36 @@
+:-  :~  title+'Tuple Indexing'
+        author+'Matthew Levan ~mastyr-bottec matt.s.levan@gmail.com'
+        navhome+'/loon/'
+        sort+4
+    ==
+;>
+
+# Cell Addressing
+
+## Tuple Indexing
+
+Given `x` is a cell, tuple indexing allows for either:
+- Retrieving the _nth_ element with `&n:x` syntax
+- Dropping the first _n_ elements with `|n:x` syntax
+
+### Examples
+
++ `&1:[42 43 44]`
++ `|1:[42 43 44]`
+
+### Exercise
+
+Use tuple indexing to retrieve `45` from `[42 43 44 45]`.
+
+;=
+  ;div
+    ;link/"/repl/main.css"(rel "stylesheet");
+    ;script@"/repl/main.js";
+    ;repl;
+    ;pre.result;
+    ;pre.solution(hidden "yes"): 45
+  ==
+  ;div.link-next
+    ;a/"/loon/hoon-to-nock": Next: Hoon to Nock
+  ==
+==

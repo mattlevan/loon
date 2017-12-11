@@ -1,0 +1,31 @@
+:-  :~  title+'The Dojo'
+        author+'Matthew Levan ~mastyr-bottec matt.s.levan@gmail.com'
+        navhome+'/loon/'
+        sort+3
+    ==
+;>
+
+# Introduction
+
+## The Dojo
+
+The Dojo is the place to quickly experiment with Urbit. On the surface the 
+Dojo is just a Hoon REPL. On the inside, the Dojo is a system for operating 
+on and transforming data in Urbit.
+
+Let's try a simple command: Enter the number 42 into the code box below and hit 
+Enter on your keyboard.
+
+;=
+  ;div
+    ;link/"/repl/main.css"(rel "stylesheet");
+    ;script@"/repl/main.js";
+    ;repl;
+    ;pre.result;
+    ;pre.solution(hidden "yes"): 42
+  ==
+  ;div.link-next
+    ;a/"/loon/noun": Next: The Noun
+  ==
+==
+

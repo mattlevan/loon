@@ -1,0 +1,16 @@
+:-  :~  title+'`axis:tree` Syntax'
+        author+'Matthew Levan ~mastyr-bottec matt.s.levan@gmail.com'
+        navhome+'/loon/'
+        sort+1
+        next+&
+    ==
+;>
+
+# Cell Addressing
+
+## `axis:tree` Syntax
+
+Now that we have a taste for what cells are, let's learn how to access elements 
+within them. Cells are binary trees: If a tree cell has address `n`, its left 
+child's address is `2n` and its right child's address is `2n+1`. Let's see how 
+this works in practice in the next part of this chapter.

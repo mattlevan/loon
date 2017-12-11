@@ -1,0 +1,10 @@
+:-  :~  title+'Nock 9: Invoke'
+        author+'Matthew Levan ~mastyr-bottec matt.s.levan@gmail.com'
+        navhome+'/loon/'
+        sort+22
+        next+&
+    ==
+;>
+
+# Hoon to Nock
+

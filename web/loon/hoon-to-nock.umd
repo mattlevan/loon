@@ -1,0 +1,122 @@
+:-  :~  title+'Hoon to Nock'
+        author+'Matthew Levan ~mastyr-bottec matt.s.levan@gmail.com'
+        navhome+'/loon/'
+        sort+3
+    ==
+;>
+
+# Hoon to Nock
+
+## Nock
+
+Recall that Nock is a function which accepts a noun and produces a noun. The 
+function itself is usually expressed in pseudocode as `*` ("tar"). 
+
+Nock accepts a noun, but usually it is a cell with the form `[subject formula]`. 
+
+## `.*` ("dottar") Overview
+
+Hoon uses "runes" (ASCII symbol digraphs) as keywords. The first one we will 
+learn about is `.*`, pronounced "dottar" because it is composed of a `.`, or 
+"dot", and a `*`, or "tar". `.*` calls the Nock function and can be used by 
+Hoon programmers to evaluate Nock within their Hoon program. `.*` accepts a 
+sample (like an "argument" in many other programming languages) which must 
+produce a cell of the form `[subject formula]`. Recall that the subject is 
+the data against which the formula is evaluated. Generally speaking, Hoon 
+compiles to a Nock formula to be evaluated against a subject.
+
+By the way, don't worry about memorizing runes-- they'll come naturally. 
+Runes are categorized according to their function, thankfully. For example, 
+all runes which start with the `.` symbol are all runes which call Nock.
+
+## Tall-Form Syntax
+
+Since `.*` is serving as our introduction to runes in Hoon, let's also use it 
+as our introduction to the most common way to write hoon: with tall-form 
+syntax. Tall-form syntax (vs. wide-form syntax, which we will introduce later) 
+can be single- or multi-line, and always uses gaps (two spaces or more) to 
+separate tokens. Let's check out an example:
+
+Single-line:
+```
+.*  42  [0 1]
+```
+
+Multi-line:
+```
+.*  42
+  [0 1]
+```
+
+Another multi-line:
+```
+.*  42
+    [0 1]
+```
+
+Simple! We will use tall-form syntax for the majority of this course.
+
+## Axiomatic Functions
+
+There are a number of axiomatic functions which Nock relies on to build 
+additional functionality. These functions are not actually available for direct 
+calling in Nock; they're just underlying axioms used by Nock. Here, we express 
+them as pseudocode. Don't worry about them, they're not real code. They are as 
+follows:
+
+### Trivial Operators
+
+```
+?[a b]  0
+?a      1
++[a b]  +[a b]
++a      1 + a
+=[a a]  0
+=[a b]  1
+```
+
+`?` ("wut") tests whether its argument is a cell or an atom and produces `0` 
+or `1`, respectively.
+
+`+` ("lus") is the increment operators, which is undefined for cells and produces 
+`1 + a` for atoms, naturally.
+
+`=` ("tis") accepts a cell and checks if its first and second elements are 
+equal. 
+
+### Tree Addressing 
+
+The only other axiomatic function is for tree addressing:
+
+```
+/[1 a]            a
+/[2 a b]          a
+/[3 a b]          b
+/[(a + a) b]      /[2 /[a b]]
+/[(a + a + 1) b]  /[3 /[a b]]
+```
+
+`/` ("fas") defines basic binary tree addressing for cells, just like we 
+used in the cell addressing chapter before this one.
+
+## Try it!
+
+Try these examples for yourself and toy with tall-form syntax to your heart's 
+content. Remember to use Shift+Enter to insert new lines and just Enter to 
+send your Hoon code to your Urbit for evaluation.
+
+After you're done exploring `.*`, we will use it and our cell addressing 
+knowledge to learn about Nock in the next sections.
+
+;=
+  ;div
+    ;link/"/repl/main.css"(rel "stylesheet");
+    ;script@"/repl/main.js";
+    ;repl;
+    ;pre.result;
+  ==
+  ;div.link-next
+    ;a/"/loon/hoon-to-nock/0": Next: Nock 0: Slot
+  ==
+==
+

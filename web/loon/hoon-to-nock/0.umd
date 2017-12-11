@@ -1,0 +1,57 @@
+:-  :~  title+'Nock 0: Slot'
+        author+'Matthew Levan ~mastyr-bottec matt.s.levan@gmail.com'
+        navhome+'/loon/'
+        sort+11
+        next+&
+    ==
+;>
+
+# Hoon to Nock
+
+## Nock 0: Slot
+
+`0` is Nock's tree addressing operator. It is the underlying instruction that 
+our cell addressing expressions from before use. Let's try it:
+
+### Definition
+
+```
+*[a 0 b]  /[b a]
+```
+
+Recall:
+```
+/[1 a]            a
+/[2 a b]          a
+/[3 a b]          b
+/[(a + a) b]      /[2 /[a b]]
+/[(a + a + 1) b]  /[3 /[a b]]
+```
+
+### Examples
+
+```
+.*  42  [0 1]
+```
+
+Here, we define a subject of `42` and a formula `[0 1]` which tells the Hoon 
+compiler that we want to use Nock 0 with the address `1`. Here's something a 
+bit more complicated, but essentially the same:
+
+```
+.*  [42 43 44]  [0 2]
+```
+
+### Exercise
+
+Use `.*` with Nock 0 to extract `44` from `[42 43 44]`.
+
+;=
+  ;div
+    ;link/"/repl/main.css"(rel "stylesheet");
+    ;script@"/repl/main.js";
+    ;repl;
+    ;pre.result;
+    ;pre.solution(hidden "yes"): 44
+  ==
+==
